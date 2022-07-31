@@ -13,6 +13,7 @@ specifiers:
   '@types/react': 18.0.15
   '@types/react-dom': 18.0.6
   autoprefixer: ^10.4.8
+  axois: 0.0.1-security
   eslint: 8.20.0
   eslint-config-next: 12.2.3
   framer-motion: ^6
@@ -35,6 +36,7 @@ dependencies:
   '@mui/material': 5.9.2_bl6qrq6463ovzmqn4cmwv7vydq
   '@react-oauth/google': 0.2.6_biqbaboplfbrettd7655fr4n2y
   '@supabase/supabase-js': 1.35.4
+  axois: 0.0.1-security
   framer-motion: 6.5.1_biqbaboplfbrettd7655fr4n2y
   jwt-decode: 3.1.2
   next: 12.2.3_qugu52izettqdqqm5qcjcltcia
@@ -1995,6 +1997,10 @@ packages:
   /axobject-query/2.2.0:
     resolution: {integrity: sha512-Td525n+iPOOyUQIeBfcASuG6uJsDOITl7Mds5gFyerkWiX7qhUTdYUBlSgNMyVqtSJqwpt1kXGLdUt6SykLMRA==}
     dev: true
+
+  /axois/0.0.1-security:
+    resolution: {integrity: sha512-8Nui4fwwyxHfjAfpDlg3Jt66EJA4i1D1eJch3D+wM/Oe+qhpyp7yfiszko/O5/adYu20wc37RG9/Eg8QIJHcvA==}
+    dev: false
 
   /babel-plugin-macros/3.1.0:
     resolution: {integrity: sha512-Cg7TFGpIr01vOQNODXOOaGz2NpCU5gl8x1qJFbb6hbZxR7XrcE2vtbAsTAbJ7/xwJtUuJEw8K8Zr/AE0LHlesg==}
