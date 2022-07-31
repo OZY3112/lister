@@ -3,11 +3,15 @@ import type { AppProps } from "next/app";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { Provider as SupaProvider } from "react-supabase";
 import { ChakraProvider } from "@chakra-ui/react";
-import supabase from "../utils/supa";
+import { createClient } from "@supabase/supabase-js";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const supabase = createClient(
+    `${process.env.NEXT_PUBLIC_SUPABASE_URL}`,
+    `${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`
+  );
   return (
-    <GoogleOAuthProvider clientId="390429814047-ghpuij7loencv92s4qbtrkk4nddlkaoo.apps.googleusercontent.com">
+    <GoogleOAuthProvider clientId={`${process.env.GOOGLE_OAUTH_ID}`}>
       <SupaProvider value={supabase}>
         <ChakraProvider>
           <Component {...pageProps} />
