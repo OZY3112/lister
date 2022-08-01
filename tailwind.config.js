@@ -10,7 +10,7 @@ module.exports = {
       colors: {
             bg: "#e0e0e0",
             pri: "#061A40",
-            sec: "#B9D6F2",
+            sec: "#4E6075",
       }
 
     },
