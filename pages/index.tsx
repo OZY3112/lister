@@ -5,9 +5,11 @@ import decode from "jwt-decode";
 import useAuthStore from "../stores/authStore";
 import Sidebar from "../components/Sidebar";
 import Note from "../components/Note";
+import { useState } from "react";
 
 const Home: NextPage = () => {
   const { addUser, user } = useAuthStore();
+  const [note, setNote] = useState([]);
 
   const Google: any = () => {
     useGoogleOneTapLogin({
@@ -28,8 +30,8 @@ const Home: NextPage = () => {
       </Head>
       {!user && <Google />}
       <section className="flex w-screen">
-        <Sidebar />
-        <Note />
+        <Sidebar setNote={setNote} />
+        <Note note={note} />
       </section>
     </div>
   );

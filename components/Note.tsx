@@ -1,7 +1,8 @@
 import React from 'react'
 
-export default function Note() {
+export default function Note({note}: any) {
   return (
-    <div></div>
+    <div className="w-3/4"
+    >{note?.content}</div>
   )
 }
