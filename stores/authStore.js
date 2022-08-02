@@ -1,14 +1,15 @@
-import create from 'zustand'
-import { persist} from 'zustand/middleware'
+import create from "zustand";
+import { persist } from "zustand/middleware";
 
 const authStore = (set) => ({
- userProfile: null,
- addUser: (user) => set({userProfile: user}),
-})
+  user: null,
+  addUser: (user) => set({ user: user }),
+  logout: () => set({ user: null }),
+});
 
 const useAuthStore = create(
- persist(authStore, {
-  name: 'auth'
- })
-)
-export default useAuthStore
+  persist(authStore, {
+    name: "auth",
+  })
+);
+export default useAuthStore;
