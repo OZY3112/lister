@@ -18,7 +18,6 @@ const Home: NextPage = () => {
         console.log("error");
       },
     });
-
     return;
   };
   return (
@@ -30,7 +29,7 @@ const Home: NextPage = () => {
       </Head>
       {!user && <Google />}
       <section className="flex w-screen">
-        <Sidebar setNote={setNote} />
+        <Sidebar setNote={setNote} note={note} />
         <Note note={note} />
       </section>
     </div>

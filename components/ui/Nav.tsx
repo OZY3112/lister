@@ -6,7 +6,7 @@ import useAuthStore from "../../stores/authStore";
 
 export default function Nav() {
   const { user }: any = useAuthStore();
-  console.log(user);
+  // console.log(user);
   
   return (
     <nav className=" border-white border-b-[2px]  p-4">
