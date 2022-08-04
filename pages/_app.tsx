@@ -3,14 +3,10 @@ import type { AppProps } from "next/app";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { Provider as SupaProvider } from "react-supabase";
 import { ChakraProvider } from "@chakra-ui/react";
-import { createClient } from "@supabase/supabase-js";
 import { useEffect, useState } from "react";
+import supabase from "../stores/supa";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const supabase = createClient(
-    `${process.env.NEXT_PUBLIC_SUPABASE_URL}`,
-    `${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`
-  );
   const [showChild, setShowChild] = useState(false);
   useEffect(() => {
     setShowChild(true);
