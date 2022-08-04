@@ -11,7 +11,7 @@ const settings = (set) => ({
 
 const useSettings = create(
   persist(settings, {
-    name: "auth",
+    name: "setting",
   })
 );
 export default useSettings;
