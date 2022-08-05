@@ -2,16 +2,7 @@ import { Textarea } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
 export default function Note({ note }: any) {
-  const [showChild, setShowChild] = useState(false);
-  console.log(note);
-  useEffect(() => {
-    setShowChild(true);
-  }, []);
-  if (!showChild) {
-    return null;
-  }
-  if (typeof window === "undefined") return <></>;
-  else
+  // console.log(note);
     return (
       <figure className="w-full min-h-full">
         <Textarea
@@ -19,6 +10,9 @@ export default function Note({ note }: any) {
           onChange={(e: any) => (note.content = e.target.value)}
           className="w-full min-h-full"
         />
+        <button className="">
+          save
+        </button>
       </figure>
     );
 }
