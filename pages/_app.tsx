@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [showChild, setShowChild] = useState(false);
-
   useEffect(() => setShowChild(true), []);
   if (!showChild) return null;
 

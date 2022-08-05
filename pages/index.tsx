@@ -26,19 +26,10 @@ const Home: NextPage = () => {
     console.log(data);
   };
   const uploadUser = async () => {
-    const { data, error } = await supabase.from("notes").insert([
-      {
-        userID: user.sub,
-        notes: [
-          {
-            title: "hello world",
-            date: "8/5/2022",
-            content: "hello world, from the inside",
-          },
-        ],
-      },
-    ]);
-    // console.log(data);
+    const { data, error } = await supabase
+      .from("users")
+      .insert([{ notes: "someValue", userId: "otherValue" }]);
+    console.log(data, error);
   };
 
   return (
