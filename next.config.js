@@ -10,10 +10,7 @@ const nextConfig = {
       "encrypted-tbn0.gstatic.com",
     ],
   },
-  env: {
-    GOOGLE_OAUTH_ID:
-      "390429814047-ghpuij7loencv92s4qbtrkk4nddlkaoo.apps.googleusercontent.com",
-  },
+  env: {},
 };
 
 module.exports = nextConfig;
