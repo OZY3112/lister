@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       </Head>
       <section className="flex w-screen">
         <Sidebar setNote={setNote} note={note} />
-        <Note note={note} />
+        <Note />
       </section>
     </div>
   );
