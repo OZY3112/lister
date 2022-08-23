@@ -1,6 +1,5 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { GoogleOAuthProvider } from "@react-oauth/google";
 import { ChakraProvider } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
@@ -11,13 +10,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   if (typeof window === "undefined") return <></>;
   else
-    return (
-      <GoogleOAuthProvider clientId={`${process.env.GOOGLE_OAUTH_ID}`}>
-        <ChakraProvider>
-          <Component {...pageProps} />
-        </ChakraProvider>
-      </GoogleOAuthProvider>
-    );
+  return (
+    <ChakraProvider>
+      <Component {...pageProps} />
+    </ChakraProvider>
+  );
 }
 
 export default MyApp;
