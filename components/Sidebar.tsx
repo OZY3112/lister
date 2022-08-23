@@ -1,5 +1,4 @@
 import { Table, TableContainer, Tbody } from "@chakra-ui/react";
-import useAuthStore from "../stores/authStore";
 import Nav from "./ui/Nav";
 
 const date = new Date();
@@ -46,6 +45,8 @@ export default function Sidebar({ setNote }: any) {
                 </figure>
               );
             })} */}
+            {/*
+            use substring(0,10) to cut the strings   */}
           </Tbody>
         </Table>
       </TableContainer>

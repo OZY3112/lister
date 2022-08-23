@@ -1,25 +1,18 @@
 import { useEffect, useState } from "react";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
+// Import the Slate editor factory.
+import { createEditor } from 'slate'
+
+// Import the Slate components and React plugin.
+import { Slate, Editable, withReact } from 'slate-react'
 
 export default function Note() {
-  const [state, setState] = useState("");
-  const [Value, setValue] = useState("");
-
   return (
     <figure className="w-full min-h-full">
-      <ReactQuill
+      {/* <ReactQuill
         theme="snow"
-        value={Value}
-        onChange={(e) => setState(e)}
-      />
-      <button
-        onClick={() => {
-          setValue(state);
-        }}
-      >
-        save
-      </button>
+        value={""}
+        onChange={(e) => console.log(e)}
+      /> */}
     </figure>
   );
 }

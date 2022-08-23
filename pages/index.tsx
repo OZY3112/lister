@@ -6,12 +6,12 @@ import { useState, useEffect } from "react";
 
 const Home: NextPage = () => {
   const [note, setNote] = useState([]);
-  // const [showChild, setShowChild] = useState(false);
-  // useEffect(() => setShowChild(true), []);
-  // if (!showChild) return null;
+  const [showChild, setShowChild] = useState(false);
+  useEffect(() => setShowChild(true), []);
+  if (!showChild) return null;
 
-  // if (typeof window === "undefined") return <></>;
-  // else
+  if (typeof window === "undefined") return <></>;
+  else
     return (
       <div className="bg-bg">
         <Head>
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
         </Head>
         <section className="flex w-screen">
           <Sidebar setNote={setNote} note={note} />
-          <Note />
+          {showChild && <Note />}
         </section>
       </div>
     );
