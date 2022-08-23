@@ -22,6 +22,7 @@
     "next": "12.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-quill": "^2.0.0",
     "slate": "^0.82.1",
     "slate-react": "^0.82.1",
     "zustand": "^4.0.0"
