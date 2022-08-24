@@ -11,11 +11,11 @@ export default function Note() {
   else
     return (
       <figure className="w-full min-h-full">
-        <ReactQuill
+        {/* <ReactQuill
         theme="snow"
         value={""}
         onChange={(e) => console.log(e)}
-      />
+      /> */}
       </figure>
     );
 }
